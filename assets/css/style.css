@@ -89,6 +89,7 @@ body {
     padding: 12px 32px;
     font-size: 1.1rem;
     font-weight: 700;
+    text-decoration: none;
     cursor: pointer;
     transition: background var(--transition);
     box-shadow: var(--shadow);
