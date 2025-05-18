@@ -176,11 +176,16 @@ body {
 }
 
 .hero-img-circular {
-    width: 400px;         /* ajuste o tamanho conforme necessário */
-    height: 400px;        /* ajuste o tamanho conforme necessário */
-    object-fit: cover;    /* garante que a imagem preencha o círculo sem distorcer */
-    border-radius: 50%;   /* deixa a imagem redonda */
-    box-shadow: 0 4px 16px rgba(80, 0, 120, 0.10); /* opcional: sombra para destacar */
+    width: 400px;
+    /* ajuste o tamanho conforme necessário */
+    height: 400px;
+    /* ajuste o tamanho conforme necessário */
+    object-fit: cover;
+    /* garante que a imagem preencha o círculo sem distorcer */
+    border-radius: 50%;
+    /* deixa a imagem redonda */
+    box-shadow: 0 4px 16px rgba(80, 0, 120, 0.10);
+    /* opcional: sombra para destacar */
     display: block;
 }
 
@@ -759,7 +764,6 @@ body {
     .hero-img-circular {
         width: 300px;
         height: 300px;
-        margin-top: 30px;
     }
 
     .hero-text h1 {
@@ -833,8 +837,8 @@ body {
     }
 
     .hero-img-circular {
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
     }
 
     .features-cards,
@@ -884,6 +888,14 @@ body {
         font-size: 1rem;
         padding: 10px 8px;
     }
+
+    .nav-button,
+    .hero-image,
+    .footer-links,
+    .footer-social,
+    .theme-toggle {
+        display: none;
+    }
 }
 
 @media (max-width: 400px) {
@@ -900,8 +912,8 @@ body {
     }
 
     .hero-img-circular {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
     }
 
     .feature-card h3,
@@ -1046,7 +1058,8 @@ body {
 .video-container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
     background: var(--white);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
