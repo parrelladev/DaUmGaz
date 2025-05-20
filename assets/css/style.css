@@ -1019,6 +1019,12 @@ body {
     transition: transform var(--transition), box-shadow var(--transition);
 }
 
+.service-card i {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
 .service-card h3, .service-card h4 {
     font-size: 1.2rem;
     font-weight: 700;
