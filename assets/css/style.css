@@ -1019,22 +1019,22 @@ body {
     transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.service-card h3 {
+.service-card h3, .service-card h4 {
     font-size: 1.2rem;
     font-weight: 700;
     margin: 18px 0 12px 0;
-    color: var(--primary);
-}
-
-.service-card h4 {
-    margin: 18px 0 12px 0;
-    color: var(--primary);
+    color: var(--text);
 }
 
 .service-card p {
     color: var(--text-light);
     font-size: 1rem;
     margin-bottom: 24px;
+}
+
+[data-theme="dark"] .service-card h3,
+[data-theme="dark"] .service-card h4 {
+    color: var(--text);
 }
 
 .service-card button {
