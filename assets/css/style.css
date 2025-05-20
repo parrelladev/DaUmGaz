@@ -1035,8 +1035,8 @@ body {
 }
 
 .service-card h3, .service-card h4 {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
     margin: 18px 0 12px 0;
     color: var(--text);
 }
