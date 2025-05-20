@@ -1,21 +1,30 @@
+/* ==========================================================================
+   Configurações Globais e Variáveis
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
+    /* Cores Principais */
     --primary: #6018f8;
     --primary-dark: #4b077a;
     --secondary: #8739f9;
     --accent: #00d084;
     --accent-hover: #009f62;
+
+    /* Cores de Fundo e Texto */
     --bg: #f5f7fa;
     --white: #fff;
     --text: #222;
     --text-light: #666;
+
+    /* Efeitos e Transições */
     --shadow: 0 8px 32px rgba(80, 0, 120, 0.10);
     --radius: 32px;
     --radius-sm: 20px;
     --transition: 0.3s cubic-bezier(.4, 0, .2, 1);
 }
 
+/* Tema Escuro */
 [data-theme="dark"] {
     --bg: #181828;
     --white: #23233a;
@@ -24,6 +33,7 @@
     --shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
+/* Estilos Base */
 body {
     font-family: 'Poppins', sans-serif;
     background: var(--bg);
@@ -34,7 +44,9 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-/* HEADER */
+/* ==========================================================================
+   Componentes de Navegação
+   ========================================================================== */
 .main-header {
     background: linear-gradient(90deg, var(--primary), var(--secondary));
     padding: 0;
@@ -59,6 +71,18 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo a:hover {
+    color: var(--accent);
 }
 
 .nav-links {
@@ -99,7 +123,9 @@ body {
     background: var(--accent-hover);
 }
 
-/* HERO */
+/* ==========================================================================
+   Seção Hero
+   ========================================================================== */
 .hero-block {
     background: linear-gradient(120deg, var(--primary), var(--secondary));
     border-radius: var(--radius);
@@ -177,25 +203,11 @@ body {
 
 .hero-img-circular {
     width: 400px;
-    /* ajuste o tamanho conforme necessário */
     height: 400px;
-    /* ajuste o tamanho conforme necessário */
     object-fit: cover;
-    /* garante que a imagem preencha o círculo sem distorcer */
     border-radius: 50%;
-    /* deixa a imagem redonda */
     box-shadow: 0 4px 16px rgba(80, 0, 120, 0.10);
-    /* opcional: sombra para destacar */
     display: block;
-}
-
-.hero-image i {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 50%;
-    padding: 32px;
-    font-size: 5rem;
-    box-shadow: var(--shadow);
 }
 
 .hero-highlight {
@@ -214,7 +226,9 @@ body {
     color: #fff;
 }
 
-/* FEATURES */
+/* ==========================================================================
+   Seção de Recursos
+   ========================================================================== */
 .features-section {
     max-width: 1100px;
     margin: 56px auto 0 auto;
@@ -270,7 +284,9 @@ body {
     margin: 0;
 }
 
-/* AUDIENCE */
+/* ==========================================================================
+   Seção de Público-Alvo
+   ========================================================================== */
 .audience-section {
     max-width: 1100px;
     margin: 56px auto 0 auto;
@@ -318,7 +334,9 @@ body {
     box-shadow: 0 12px 32px rgba(80, 0, 120, 0.18);
 }
 
-/* BENEFÍCIOS */
+/* ==========================================================================
+   Seção de Benefícios
+   ========================================================================== */
 .benefits-section {
     max-width: 1100px;
     margin: 56px auto 0 auto;
@@ -366,7 +384,9 @@ body {
     box-shadow: 0 12px 32px rgba(80, 0, 120, 0.18);
 }
 
-/* PRICING */
+/* ==========================================================================
+   Seção de Preços
+   ========================================================================== */
 .pricing-section {
     max-width: 1100px;
     margin: 56px auto 0 auto;
@@ -377,7 +397,7 @@ body {
     display: flex;
     gap: 32px;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: initial;
     margin-top: 32px;
 }
 
@@ -409,6 +429,13 @@ body {
     margin: 18px 0 18px 0;
 }
 
+.pricing-card .free {
+    color: #6018f8;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 18px 0 18px 0;
+}
+
 .pricing-card button {
     background: var(--accent);
     color: #fff;
@@ -422,6 +449,11 @@ body {
     transition: background var(--transition);
 }
 
+.pricing-card .button-free {
+    background: #4715ab;
+    color: #fff;
+}
+
 .pricing-card ul {
     list-style: none;
     padding-left: 0;
@@ -433,7 +465,6 @@ body {
 
 .pricing-card li i {
     color: #6a0dad;
-    /* Ou a cor que preferir */
     margin-right: 8px;
 }
 
@@ -441,7 +472,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* ...outros estilos existentes... */
 }
 
 .pricing-footer {
@@ -455,6 +485,10 @@ body {
     background: var(--accent-hover);
 }
 
+.pricing-card .button-free:hover {
+    background: #270b5e;
+}
+
 .pricing-card p {
     color: var(--text-light);
     font-size: 1rem;
@@ -466,7 +500,9 @@ body {
     box-shadow: 0 12px 32px rgba(80, 0, 120, 0.18);
 }
 
-/* TESTIMONIAL */
+/* ==========================================================================
+   Seção de Depoimentos
+   ========================================================================== */
 .testimonial-section {
     max-width: 700px;
     margin: 56px auto 0 auto;
@@ -493,7 +529,9 @@ body {
     opacity: 0.3;
 }
 
-/* FAQ */
+/* ==========================================================================
+   Seção FAQ
+   ========================================================================== */
 .faq-section {
     max-width: 900px;
     margin: 56px auto 0 auto;
@@ -564,7 +602,9 @@ body {
     }
 }
 
-/* CTA FINAL */
+/* ==========================================================================
+   Seção CTA Final
+   ========================================================================== */
 .cta-final-section {
     background: linear-gradient(120deg, var(--primary), var(--secondary));
     border-radius: var(--radius);
@@ -628,7 +668,9 @@ body {
     background: var(--accent-hover);
 }
 
-/* FOOTER */
+/* ==========================================================================
+   Rodapé
+   ========================================================================== */
 .main-footer {
     background: linear-gradient(90deg, var(--primary), var(--secondary));
     color: #fff;
@@ -691,7 +733,10 @@ body {
     color: var(--accent);
 }
 
-/* BOTÃO TEMA */
+/* ==========================================================================
+   Componentes de Interface
+   ========================================================================== */
+/* Botão de Tema */
 .theme-toggle {
     position: fixed;
     bottom: 24px;
@@ -728,7 +773,9 @@ body {
     padding: 10px;
 }
 
-/* RESPONSIVO */
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
 @media (max-width: 900px) {
     .menu-toggle {
         display: block;
@@ -775,11 +822,14 @@ body {
     }
 
     .features-cards,
-    .services-cards,
     .benefits-cards,
     .pricing-cards {
         gap: 20px;
         padding: 0 20px;
+    }
+
+    .services-cards {
+        flex-wrap: initial;
     }
 
     .feature-card,
@@ -842,11 +892,11 @@ body {
     }
 
     .features-cards,
-    .services-cards,
     .benefits-cards,
     .pricing-cards {
         gap: 20px;
         padding: 0 20px;
+        flex-wrap: wrap;
     }
 
     .feature-card,
@@ -928,7 +978,9 @@ body {
     }
 }
 
-/* SERVIÇOS FREEMIUM E PREMIUM */
+/* ==========================================================================
+   Seção de Serviços
+   ========================================================================== */
 .services-section {
     max-width: 1100px;
     margin: 56px auto 0 auto;
@@ -951,7 +1003,6 @@ body {
     display: flex;
     gap: 32px;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .service-card {
@@ -1041,14 +1092,9 @@ body {
     box-shadow: 0 12px 32px rgba(80, 0, 120, 0.18);
 }
 
-@media (max-width: 900px) {
-    .services-cards {
-        flex-direction: column;
-        gap: 18px;
-    }
-}
-
-/* Video Section */
+/* ==========================================================================
+   Seção de Vídeo
+   ========================================================================== */
 .video-section {
     max-width: 1100px;
     margin: 40px auto 0 auto;
@@ -1059,7 +1105,6 @@ body {
     position: relative;
     width: 100%;
     padding-top: 56.25%;
-    /* 16:9 Aspect Ratio */
     background: var(--white);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -1075,7 +1120,9 @@ body {
     border: none;
 }
 
-/* Mission Section */
+/* ==========================================================================
+   Seção de Missão
+   ========================================================================== */
 .mission-section {
     max-width: 900px;
     margin: 56px auto 0 auto;
@@ -1102,7 +1149,9 @@ body {
     line-height: 1.6;
 }
 
-/* Values Section */
+/* ==========================================================================
+   Seção de Valores
+   ========================================================================== */
 .values-section {
     max-width: 1100px;
     margin: 56px auto 0 auto;
@@ -1153,7 +1202,9 @@ body {
     line-height: 1.6;
 }
 
-/* Team Section */
+/* ==========================================================================
+   Seção de Equipe
+   ========================================================================== */
 .team-section {
     max-width: 1100px;
     margin: 56px auto 0 auto;
@@ -1204,7 +1255,9 @@ body {
     margin-bottom: 20px;
 }
 
-/* Responsive Adjustments */
+/* ==========================================================================
+   Ajustes Responsivos Adicionais
+   ========================================================================== */
 @media (max-width: 900px) {
     .video-container {
         border-radius: var(--radius-sm);
@@ -1226,6 +1279,11 @@ body {
     .team-grid {
         gap: 24px;
     }
+
+    .services-cards {
+        flex-wrap: wrap;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -1252,5 +1310,9 @@ body {
 
     .team-card img {
         height: 250px;
+    }
+
+    .services-cards {
+        flex-wrap: wrap;
     }
 }
