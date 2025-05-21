@@ -513,29 +513,99 @@ body {
    Seção de Depoimentos
    ========================================================================== */
 .testimonial-section {
-    max-width: 700px;
+    max-width: 1100px;
     margin: 56px auto 0 auto;
     text-align: center;
+    padding: 0 20px;
+}
+
+.testimonial-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 36px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
 }
 
 .testimonial-card {
-    background: linear-gradient(120deg, var(--primary), var(--secondary));
-    color: #fff;
+    background: var(--white);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 48px 32px 36px 32px;
-    font-size: 1.2rem;
-    font-style: italic;
+    padding: 32px 24px;
     position: relative;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(80, 0, 120, 0.18);
 }
 
 .testimonial-card i {
-    position: absolute;
-    top: 24px;
-    left: 32px;
-    font-size: 2rem;
-    opacity: 0.3;
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.testimonial-card p {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.testimonial-author img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 3px solid var(--primary);
+}
+
+.testimonial-author strong {
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.testimonial-author span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .testimonial-card {
+        padding: 24px 20px;
+    }
 }
 
 /* ==========================================================================
