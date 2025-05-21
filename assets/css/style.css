@@ -571,12 +571,12 @@ body {
 }
 
 .testimonial-author img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 12px;
-    border: 3px solid var(--primary);
+    border: 2px solid var(--primary);
 }
 
 .testimonial-author strong {
@@ -1411,7 +1411,7 @@ body {
 .diagnostic-block {
     background: linear-gradient(120deg, var(--primary), var(--secondary));
     border-radius: var(--radius);
-    margin: 40px auto 0 auto;
+    margin: 60px auto 0 auto;
     max-width: 1100px;
     box-shadow: var(--shadow);
     padding: 64px 40px 48px 40px;
