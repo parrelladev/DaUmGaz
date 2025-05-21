@@ -1404,3 +1404,118 @@ body {
         flex-wrap: wrap;
     }
 }
+
+/* ==========================================================================
+   Seção de Diagnóstico
+   ========================================================================== */
+.diagnostic-block {
+    background: linear-gradient(120deg, var(--primary), var(--secondary));
+    border-radius: var(--radius);
+    margin: 40px auto 0 auto;
+    max-width: 1100px;
+    box-shadow: var(--shadow);
+    padding: 64px 40px 48px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.diagnostic-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 950px;
+    gap: 40px;
+}
+
+.diagnostic-text {
+    flex: 3;
+    color: #fff;
+}
+
+.diagnostic-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 32px 0;
+    line-height: 1.2;
+}
+
+.diagnostic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+}
+
+.diagnostic-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.diagnostic-list li i {
+    color: var(--accent);
+    font-size: 1.4rem;
+}
+
+.diagnostic-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diagnostic-img-circular {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(80, 0, 120, 0.10);
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .diagnostic-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .diagnostic-text h2 {
+        font-size: 2rem;
+    }
+
+    .diagnostic-list {
+        text-align: left;
+    }
+
+    .diagnostic-img-circular {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .diagnostic-block {
+        margin: 0;
+        border-radius: 0;
+        padding: 40px 20px;
+    }
+
+    .diagnostic-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .diagnostic-list li {
+        font-size: 1.1rem;
+    }
+
+    .diagnostic-img-circular {
+        width: 250px;
+        height: 250px;
+    }
+}
