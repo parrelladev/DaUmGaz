@@ -123,6 +123,24 @@ body {
     background: var(--accent-hover);
 }
 
+.diagnostic-button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.diagnostic-button:hover {
+    background: var(--accent-hover);
+}
+
 /* ==========================================================================
    Seção Hero
    ========================================================================== */
@@ -1501,7 +1519,7 @@ body {
 
 @media (max-width: 600px) {
     .diagnostic-block {
-        margin: 0;
+        margin-top: 50px;
         border-radius: 0;
         padding: 40px 20px;
     }
