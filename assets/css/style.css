@@ -1355,6 +1355,42 @@ body {
     margin: 20px 0 8px 0;
 }
 
+.team-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0 8px 0;
+}
+
+.team-name h3 {
+    margin: 0;
+}
+
+.linkedin-icon, .social-icon {
+    color: var(--primary);
+    font-size: 1.2rem;
+    transition: color var(--transition), transform var(--transition);
+    display: inline-block;
+    margin: 0;
+}
+
+.linkedin-icon:hover, .social-icon:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+.social-icon {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
 .team-card p {
     color: var(--text-light);
     font-size: 1rem;
